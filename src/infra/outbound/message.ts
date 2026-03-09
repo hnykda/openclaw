@@ -259,6 +259,8 @@ export async function sendMessage(params: MessageSendParams): Promise<MessageSen
       channel,
       sessionKey: params.mirror?.sessionKey,
       idempotencyKey: params.idempotencyKey ?? randomIdempotencyKey(),
+      replyToId: params.replyToId,
+      threadId: params.threadId,
     },
   });
 
